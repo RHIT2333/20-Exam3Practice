@@ -81,9 +81,52 @@ def run_test_doubler():
     print('The returned value should be:', expected)
 
     # -------------------------------------------------------------------------
-    # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
+    # DONE 2 (continued): Add your ADDITIONAL test(s) here:
     # -------------------------------------------------------------------------
 
+    # Test 2:
+    arg1 = [3, 6, 9]
+    arg2 = [14, 16, 19, 70]
+    correct_arg1_after = [6, 12, 18]
+    correct_arg2_after = [14, 16, 19, 70]
+    expected = [28, 32, 38, 140]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 1 is:', arg1)
+    print('  Argument 2 is:', arg2)
+
+    answer = doubler(arg1, arg2)
+
+    print('AFTER the function call:')
+    print('  Argument 1 is:       ', arg1)
+    print('  Argument 1 should be:', correct_arg1_after)
+    print('  Argument 2 is:       ', arg2)
+    print('  Argument 2 should be:', correct_arg2_after)
+    print('The returned value is:       ', answer)
+    print('The returned value should be:', expected)
+
+    # Test 3:
+    arg1 = [4, 8, 9, 7, 10]
+    arg2 = [3, 0, 0]
+    correct_arg1_after = [8, 16, 18, 14, 20]
+    correct_arg2_after = [3, 0, 0]
+    expected = [6, 0, 0]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 1 is:', arg1)
+    print('  Argument 2 is:', arg2)
+
+    answer = doubler(arg1, arg2)
+
+    print('AFTER the function call:')
+    print('  Argument 1 is:       ', arg1)
+    print('  Argument 1 should be:', correct_arg1_after)
+    print('  Argument 2 is:       ', arg2)
+    print('  Argument 2 should be:', correct_arg2_after)
+    print('The returned value is:       ', answer)
+    print('The returned value should be:', expected)
 
 def doubler(list1, list2):
     """
@@ -112,7 +155,9 @@ def doubler(list1, list2):
     #    TIME ESTIMATE:   5 minutes.
     # -------------------------------------------------------------------------
 
-    list2_neo = list2
+    list2_neo = []
+    for m in range(len(list2)):
+        list2_neo.append(list2[m])
     for j in range(len(list1)):
         list1[j] = 2 * list1[j]
     for k in range(len(list2_neo)):
