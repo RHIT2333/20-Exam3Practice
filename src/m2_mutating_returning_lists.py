@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Hanrui Chen.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -38,7 +38,7 @@ def main():
 def run_test_doubler():
     """ Tests the    doubler    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  doubler  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -103,7 +103,7 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -112,6 +112,12 @@ def doubler(list1, list2):
     #    TIME ESTIMATE:   5 minutes.
     # -------------------------------------------------------------------------
 
+    list2_neo = list2
+    for j in range(len(list1)):
+        list1[j] = 2 * list1[j]
+    for k in range(len(list2_neo)):
+        list2_neo[k] = 2 * list2_neo[k]
+    return list2_neo
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
